@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+</head>
+<body>
+	<?php foreach($data as $par){ ?>
+		<form action="?action=updateuser" method="post">
+			User ID:
+			<input type="text" name="userID" readonly="readonly" value="<?=$par['userID']?>"/><br />
+			User Name:
+			<input type="text" name="username" value="<?=$par['username']?>"/><br />
+			Password:
+			<input type="text" name="password" value="<?=$par['password']?>"/><br />
+
+			<input type="submit" value="update" />
+		</form>
+	<?php } ?>
+</body>
+</html>
